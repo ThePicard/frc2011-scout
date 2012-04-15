@@ -1,0 +1,16 @@
+SCOUT
+=====
+
+I wrote this as a scouter for the 2011 FRC season. I never quite finished the
+individual team or match views, only the insert and list views. Those were the
+most important, as we primarily wanted to see the best teams.
+
+To build you will need GTK+ and sqlite3 development headers. For debian based
+systems:
+apt-get install libgtk2.0-dev libsqlite3-dev
+
+The build command would then be:
+gcc -o scout scout.c `pkg-config --libs --cflags gtk+-2.0 sqlite3 gmodule-2.0`
+
+scout searches only the current directory for scout.glade, so you kind have to
+take that wherever you use scout. Or change the path in scout.c ;)
